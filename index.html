@@ -5,13 +5,13 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>TechWeb1718 | Home</title>
+	<title>WaveSound | Home</title>
 
 	<!-- font + fav icon -->
 	<link rel="icon" type="image/png" href="img/logo.png">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-	<!-- style -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 </head>
@@ -19,25 +19,100 @@
 <body>
 
 	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col-3-sm center"><img src="img/logo.png" alt="" /></div>
-				<div class="col-8-sm">
-					<h1>Nome TBD</h1>
+		<div class="header-container">
+			<div class="header-left">
+				<a class="img-link" href="index.html">
+					<div id="logo"></div>
+					<div id="brand" class="pacifico italic">WaveSound</div>
+				</a>
+			</div>
+			<div class="header-right right">
+				<div id="join-us">
+					Join our community, it's 100% free
+				</div>
+				<div id="login-registration">
+					<a href="login.html">LOG IN</a><a href="register.html">SIGN UP</a>
 				</div>
 			</div>
 		</div>
 	</header>
-	<footer>
-		<div class="container mobile-footer">
-			<div class="row">
-				<div class="col-4-sm center">tasto</div>
-				<div class="col-4-sm center">tasto</div>
-				<div class="col-4-sm center">tasto</div>
+
+	<button onclick="topFunction()" id="button-top" title="Go to top">Top</button>
+
+	<main>
+
+		<div class="section">
+			<div class="welcome center">
+				<h1 id="title1">Welcome to <span class="pacifico italic">WaveSound</span></h1>
+				<h2 id="title2">The home of copyright free soundracks</h2>
+			</div>
+
+			<div class="section-top3 center">
+				<h2 class="">Check out our top 3 of the...</h2>
+				<div class="button-top3">
+					<button class="selected" id="button-week" type="button">week</button>
+					<button id="button-month" type="button">month</button>
+					<button id="button-year" type="button">year</button>
+				</div>
+				<div class="card-container center">
+					<div id="week-cards">
+						<div class="card" id="week1">week1</div>
+						<div class="card" id="week2">week2</div>
+						<div class="card" id="week3">week3</div>
+					</div>
+					<div id="month-cards" class="hidden">
+						<div class="card" id="month1">month1</div>
+						<div class="card" id="month2">month2</div>
+						<div class="card" id="month3">month3</div>
+					</div>
+					<div id="year-cards" class="hidden">
+						<div class="card" id="year1">year1</div>
+						<div class="card" id="year2">year2</div>
+						<div class="card" id="year3">year3</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		</header>
+
+		<div class="section-sidelong">
+			<svg id="svg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+			    <polygon fill="white" points="0 0, 100 0, 0 100"/>
+			</svg>
+
+			<div class="sezione sidelong-padding center">
+				<h1>PROVA</h1>
+			</div>
+
+			<svg id="svg-bot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+			    <polygon fill="white" points="0 100,100 0,100 100"/>
+        	</svg>
+		</div>
+
+	</main>
+
+	<footer>
+		<div class="footer-links">
+			Qua ci mettiamo tutti i link del sito. Esempio: https://www.wavesound.com.au/
+			<ul>
+				<li><a href="#">test1</a></li>
+				<li><a href="#">test2</a></li>
+				<li><a href="#">test3</a></li>
+				<li><a href="#">test4</a></li>
+				<li><a href="#">test5</a></li>
+			</ul>
+		</div>
+		<div class="footer-bot">
+			<div class="footer-left">
+				<a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Accessibility Policy</a>
+			</div>
+			<div class="footer-right"><span class="pacifico italic">Wavesound</span>&nbsp; Copyright &copy; 2017. All rights reserved.</div>
+		</div>
 	</footer>
+
+	<script src="js/card.js"></script>
+
+	<script src="js/button-top.js"></script>
+
 </body>
 
 </html>
