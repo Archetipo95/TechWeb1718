@@ -27,16 +27,19 @@ if(isset($_POST['password']) && isset($_POST['psw-repeat']) && isset($_POST['ema
 			if((strlen($password) < 8) || ($password != $passwordConfirm)){
 				echo 'Password not valid';
 				$error = true;
+				header("Location:invalid-password.html");
 				$connection->close();
 			}
         }else{
 			echo 'Email already used';
             $error = true;
+			header("Location:email-used.html");
             $connection->close();
 		}
     }else{
         echo 'Use valid email';
 		$error = true;
+		header("Location:invalid-email.html");
         $connection->close();
 	
 	    }
@@ -47,6 +50,7 @@ if(isset($_POST['password']) && isset($_POST['psw-repeat']) && isset($_POST['ema
     	$insertQuery = "INSERT INTO `my_wavesound`.`user` (`email`, `password`) VALUES ('$email', '$pass_hash');";
     	$result = $connection->query($insertQuery);
 		echo 'Data send succesfully to DB. Check your DB';
+		header("Location:account-created.html");
 	} else {
 		echo 'Data NOT send to DB';
 	}

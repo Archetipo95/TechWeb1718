@@ -1,7 +1,7 @@
 <?php
 
 $dbhost = 'localhost';
-$dbuser = 'wavesound';
+$dbuser = 'root';
 $dbpassword = '';
 $dbname = 'my_wavesound';
 
