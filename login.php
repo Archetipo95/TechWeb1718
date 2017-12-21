@@ -5,7 +5,7 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>WaveSound | Registration</title>
+	<title>WaveSound | Log In</title>
 
 	<!-- font + fav icon -->
 	<link rel="icon" type="image/png" href="img/logo.png">
@@ -19,15 +19,17 @@
 
 <body>
 
+	<?php include '/connessione.php';?>
+
 	<header>
 		<div class="header-container">
 			<div class="header-left">
-				<a class="img-link" href="index.html">
+				<a id="link-home" href="index.html">
 					<div id="logo"></div>
 					<div id="brand" class="pacifico italic">WaveSound</div>
 				</a>
 			</div>
-			<div class="header-right">
+			<div class="header-right right">
 				<div id="join-us">
 					Join our community, it's 100% free
 				</div>
@@ -37,41 +39,47 @@
 
 	<main class="reglog center">
 		<div class="reglog-title">
-			<h1>Create your <span class="pacifico italic"> WaveSound </span> account</h1>
+			<h1>Log in your <span class="pacifico italic"> WaveSound </span> account</h1>
 		</div>
-		<form action="register.php" method="post">
+		<form action="/action_page.php">
 			<div class="input-text">
-				<label for="username">Username</label>
-				<br/>
-				<input type="text" placeholder="Your username" name="username" required>
-				<br/>
 				<label for="email">Email</label>
 				<br/>
-				<input type="email" placeholder="Your e-mail address" name="email" required>
+				<input type="text" placeholder="Your e-mail address" name="email" required>
 				<br/>
 				<label for="password">Password</label>
 				<br/>
 				<input type="password" placeholder="Your password" name="password" required>
-				<br/>
-				<label for="confirmpassword">Confirm Password</label>
-				<br/>
-				<input type="password" placeholder="Confirm Password" name="psw-repeat" required>
 			</div>
 
 			<button class="form-buttons" id="button-submit" type="submit" class="signupbtn">Sign Up</button>
 			<button class="form-buttons" id="button-cancel" type="button" class="cancelbtn">Cancel</button>
 			<br/>
+			<input type="checkbox" checked="checked"> Remember me
 			<br/>
-			<p id="legal">By clicking "Sign Up" and creating a WaveSound account, I acknowledge that I understand and agree to this website's <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</p>
-
+			<br/>
+			<a href="#">Forgot password</a> or <a href="register.html">Need new account</a>
 		</form>
 	</main>
 
 	<footer>
-		<div data-include="footer.html"></div>
+		<div class="footer-links">
+			Qua ci mettiamo tutti i link del sito. Esempio: https://www.wavesound.com.au/
+			<ul>
+				<li><a href="#">test1</a></li>
+				<li><a href="#">test2</a></li>
+				<li><a href="#">test3</a></li>
+				<li><a href="#">test4</a></li>
+				<li><a href="#">test5</a></li>
+			</ul>
+		</div>
+		<div class="footer-bot">
+			<div class="footer-left">
+				<a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Accessibility Policy</a>
+			</div>
+			<div class="footer-right"><span class="pacifico italic">Wavesound</span>&nbsp; Copyright &copy; 2017. All rights reserved.</div>
+		</div>
 	</footer>
-
-	<script src="js/load-footer.js"></script>
 
 </body>
 
